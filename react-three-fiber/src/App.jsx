@@ -1,4 +1,5 @@
 import {
+  ContactShadows,
   Float,
   OrbitControls,
   PresentationControls,
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <Canvas camera={{ fov: 45, near: 0.1, far: 2000 }}>
+      <Canvas camera={{ fov: 45, near: 0.1, far: 2000, position: [0, 1.5, 6] }}>
         <color args={["#155196"]} attach="background" />
         {/* ジオメトリを立体的に稼働させるライブラリ */}
         {/* <OrbitControls /> */}
@@ -92,11 +93,12 @@ function App() {
           <Text
             font="/Pacifico-Regular.ttf"
             fontSize={0.5}
-            position={[0, 1.125, 0.75]}
+            position={[0, 1.325, 0.75]}
           >
             Hello React-three-fiber
           </Text>
         </PresentationControls>
+        <ContactShadows scale={7} blur={2.4} opacity={0.7} position-y={-2.0} />
       </Canvas>
     </div>
   );
