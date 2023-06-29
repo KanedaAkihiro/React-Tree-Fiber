@@ -28,6 +28,8 @@ function App() {
         {/* <OrbitControls /> */}
         {/* ジオメトリの明細工場 */}
         <ambientLight />
+        {/* オブジェクト全体の明るさ向上 */}
+        <directionalLight intensity={1.4} />
         {/* <mesh>
           <boxGeometry />
           <meshStandardMaterial />
@@ -81,6 +83,8 @@ function App() {
               object={donut.scene}
               position={[3, -1, 0]}
               scale={[3, 3, 3]}
+              // オブジェクトを傾けるプロパティ
+              rotation-x={0.4}
             ></primitive>
           </Float>
         </PresentationControls>
