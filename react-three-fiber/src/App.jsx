@@ -2,6 +2,7 @@ import {
   Float,
   OrbitControls,
   PresentationControls,
+  Text,
   useGLTF,
 } from "@react-three/drei";
 import "./App.css";
@@ -87,6 +88,14 @@ function App() {
               rotation-x={0.4}
             ></primitive>
           </Float>
+
+          <Text
+            font="/Pacifico-Regular.ttf"
+            fontSize={0.5}
+            position={[0, 1.125, 0.75]}
+          >
+            Hello React-three-fiber
+          </Text>
         </PresentationControls>
       </Canvas>
     </div>
