@@ -1,7 +1,7 @@
 import {
   ContactShadows,
   Float,
-  OrbitControls,
+  Html,
   PresentationControls,
   Text,
   useGLTF,
@@ -53,7 +53,21 @@ function App() {
               // 左数値＝オブジェクトの横位置(X)・真ん中数値=高さ(Y)・右数値=奥行(Z)
               position={[0, 0, -1]}
             />
-            <primitive object={macbook.scene} position={[0, -1, 0]}></primitive>
+            <primitive object={macbook.scene} position={[0, -1, 0]}>
+              {/* iframe ＝ 外部サイトのHPなどをオブジェクトに表示させるタグ */}
+              <Html
+                position={[0, 1.56, -1.4]}
+                distanceFactor={1.17}
+                rotation-x={-0.256}
+                transform
+                wrapperClass="htmlScreen"
+              >
+                <iframe
+                  src="http://abehiroshi.la.coocan.jp/"
+                  frameborder="0"
+                ></iframe>
+              </Html>
+            </primitive>
           </Float>
           {/* Coffeeオブジェクト */}
           <Float rocationIndensity={1.6}>
