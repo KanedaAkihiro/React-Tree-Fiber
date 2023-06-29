@@ -8,6 +8,7 @@ import "./App.css";
 import { Canvas } from "react-three-fiber";
 
 function App() {
+  // Copy direct linkのインポート方法
   const macbook = useGLTF(
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
   );
@@ -16,6 +17,7 @@ function App() {
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/cup-tea/model.gltf"
   );
 
+  // Down Load Modelでのインポート方法
   const donut = useGLTF("./donut.gltf");
 
   return (
@@ -36,6 +38,7 @@ function App() {
           config={{ mass: 2, tenstion: 400 }}
           snap={{ mass: 4, tenstion: 300 }}
         >
+          {/* PCオブジェクト */}
           <Float rocationIndensity={1.6}>
             <rectAreaLight
               color={"#0021a7"}
@@ -43,10 +46,12 @@ function App() {
               rotation={[0.1, Math.PI, 0]}
               width={2.0}
               height={1.65}
+              // 左数値＝オブジェクトの横位置(X)・真ん中数値=高さ(Y)・右数値=奥行(Z)
               position={[0, 0, -1]}
             />
             <primitive object={macbook.scene} position={[0, -1, 0]}></primitive>
           </Float>
+          {/* Coffeeオブジェクト */}
           <Float rocationIndensity={1.6}>
             <rectAreaLight
               color={"#0021a7"}
@@ -62,6 +67,7 @@ function App() {
               scale={[2, 2, 2]}
             ></primitive>
           </Float>
+          {/* Donutオブジェクト */}
           <Float rocationIndensity={1.6}>
             <rectAreaLight
               color={"#0021a7"}
