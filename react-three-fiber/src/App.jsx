@@ -25,17 +25,11 @@ function App() {
   return (
     <div>
       <Canvas camera={{ fov: 45, near: 0.1, far: 2000, position: [0, 1.5, 6] }}>
-        <color args={["#155196"]} attach="background" />
-        {/* ジオメトリを立体的に稼働させるライブラリ */}
-        {/* <OrbitControls /> */}
-        {/* ジオメトリの明細工場 */}
+        <color args={["red"]} attach="background" />
+        {/* ジオメトリの明細向上 */}
         <ambientLight />
         {/* オブジェクト全体の明るさ向上 */}
         <directionalLight intensity={1.4} />
-        {/* <mesh>
-          <boxGeometry />
-          <meshStandardMaterial />
-        </mesh> */}
 
         <PresentationControls
           global
@@ -107,9 +101,9 @@ function App() {
           <Text
             font="/Pacifico-Regular.ttf"
             fontSize={0.5}
-            position={[0, 1.325, 0.75]}
+            position={[0, 2, 0.75]}
           >
-            Hello React-three-fiber
+            Study-React
           </Text>
         </PresentationControls>
         <ContactShadows scale={7} blur={2.4} opacity={0.7} position-y={-2.0} />
