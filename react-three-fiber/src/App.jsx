@@ -16,6 +16,8 @@ function App() {
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/cup-tea/model.gltf"
   );
 
+  const donut = useGLTF("./donut.gltf");
+
   return (
     <div>
       <Canvas camera={{ fov: 45, near: 0.1, far: 2000 }}>
@@ -58,6 +60,21 @@ function App() {
               object={coffee.scene}
               position={[-2.4, -1.3, 0.2]}
               scale={[2, 2, 2]}
+            ></primitive>
+          </Float>
+          <Float rocationIndensity={1.6}>
+            <rectAreaLight
+              color={"#0021a7"}
+              intensity={55}
+              rotation={[0.1, Math.PI, 0]}
+              width={2.0}
+              height={1.65}
+              position={[0, 0, -1]}
+            />
+            <primitive
+              object={donut.scene}
+              position={[3, -1, 0]}
+              scale={[3, 3, 3]}
             ></primitive>
           </Float>
         </PresentationControls>
